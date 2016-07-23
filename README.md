@@ -3,7 +3,7 @@ A dropwizard &amp; Spring &amp; Hibernate &amp; HSQLDB &amp; Mustache project fo
 
 **To run it you can:**
 <ol>
-<li>Clone -> mvn install -> java -jar target/ImageFactory-1.0-SNAPSHOT.jar
+<li>Clone -> mvn install -> java -jar target/ImageFactory-1.0-SNAPSHOT.jar server config.yml
 <li>Configure the application in your IDE and run it.
 </ol>
 
