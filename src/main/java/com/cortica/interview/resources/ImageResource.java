@@ -21,8 +21,6 @@ import javax.ws.rs.core.Response;
 @Path("/image")
 public class ImageResource {
 
-    private static final Logger LOGGER = LoggerFactory.getLogger(ImageResource.class);
-
     @Autowired
     private ImageManipulationService imageManipulationService;
 

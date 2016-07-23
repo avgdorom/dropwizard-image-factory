@@ -34,3 +34,10 @@ A dropwizard &amp; Spring &amp; Hibernate &amp; HSQLDB &amp; Mustache project fo
 <li>For example: If your new class' getName() method returns "crop", the a request using it may look like:<br/>
     http://localhost:8080/image/process?params={"crop":{"param1":value1,"param2":value2}}
 </ol>
+
+**Notes: (known issues since it's an exercise...)**
+<ol>
+<li>The tests are partial - I know! :-)
+<li>Running the demo entry point consecutively with different parameters each time, may show weird results. This is because the names of the images saved to disk are always the same. 
+<li>It may not be the best thing to use ImageEntity as the object that the view uses.
+</ol>
