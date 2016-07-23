@@ -11,7 +11,7 @@ import javax.validation.constraints.NotNull;
 import java.util.HashMap;
 import java.util.Map;
 
-public class CorticaImageFactoryConfiguration extends Configuration {
+public class ImageFactoryConfiguration extends Configuration {
 
     /*@Valid
     @NotNull

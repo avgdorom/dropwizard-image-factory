@@ -15,34 +15,34 @@ import org.springframework.web.context.support.AnnotationConfigWebApplicationCon
 import javax.ws.rs.Path;
 import java.util.Map;
 
-public class CorticaImageFactoryApplication extends Application<CorticaImageFactoryConfiguration> {
+public class ImageFactoryApplication extends Application<ImageFactoryConfiguration> {
 
-    public static final HibernateBundle<CorticaImageFactoryConfiguration> HIBERNATE_BUNDLE =
-            new HibernateBundle<CorticaImageFactoryConfiguration>(ImageEntity.class) {
+    public static final HibernateBundle<ImageFactoryConfiguration> HIBERNATE_BUNDLE =
+            new HibernateBundle<ImageFactoryConfiguration>(ImageEntity.class) {
                 @Override
-                public PooledDataSourceFactory getDataSourceFactory(CorticaImageFactoryConfiguration corticaImageFactoryConfiguration) {
-                    return corticaImageFactoryConfiguration.getDataSourceFactory();
+                public PooledDataSourceFactory getDataSourceFactory(ImageFactoryConfiguration imageFactoryConfiguration) {
+                    return imageFactoryConfiguration.getDataSourceFactory();
                 }
             };
 
     public static void main(final String[] args) throws Exception {
-        new CorticaImageFactoryApplication().run(args);
+        new ImageFactoryApplication().run(args);
     }
 
     @Override
     public String getName() {
-        return "CorticaImageFactory";
+        return "ImageFactory";
     }
 
     @Override
-    public void initialize(final Bootstrap<CorticaImageFactoryConfiguration> bootstrap) {
+    public void initialize(final Bootstrap<ImageFactoryConfiguration> bootstrap) {
         bootstrap.addBundle(HIBERNATE_BUNDLE);
         bootstrap.addBundle(new ViewBundle());
         bootstrap.addBundle(new AssetsBundle("/assets", "/assets"));
     }
 
     @Override
-    public void run(final CorticaImageFactoryConfiguration configuration,
+    public void run(final ImageFactoryConfiguration configuration,
                     final Environment environment) {
         AnnotationConfigWebApplicationContext parent = new AnnotationConfigWebApplicationContext();
         AnnotationConfigWebApplicationContext ctx = new AnnotationConfigWebApplicationContext();
