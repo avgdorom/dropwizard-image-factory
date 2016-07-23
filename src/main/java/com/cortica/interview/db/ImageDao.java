@@ -1,6 +1,6 @@
 package com.cortica.interview.db;
 
-import com.cortica.interview.CorticaImageFactoryApplication;
+import com.cortica.interview.ImageFactoryApplication;
 import io.dropwizard.hibernate.AbstractDAO;
 import org.springframework.stereotype.Service;
 
@@ -13,7 +13,7 @@ import java.util.List;
 public class ImageDao extends AbstractDAO<ImageEntity> {
 
     public ImageDao() {
-        super(CorticaImageFactoryApplication.HIBERNATE_BUNDLE.getSessionFactory());
+        super(ImageFactoryApplication.HIBERNATE_BUNDLE.getSessionFactory());
     }
 
     public List<ImageEntity> findAll() {
