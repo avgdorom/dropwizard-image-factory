@@ -31,6 +31,6 @@ A dropwizard &amp; Spring &amp; Hibernate &amp; HSQLDB &amp; Mustache project fo
 <ol>
 <li>Add a new class, implementing ImageManipulator.
 <li>Its implementation for getName() will determine the way to use it in the API.
-<li>For example: If your new class' getName() method return "crop", the a request using it may look like:<br/>
+<li>For example: If your new class' getName() method returns "crop", the a request using it may look like:<br/>
     http://localhost:8080/image/process?params={"crop":{"param1":value1,"param2":value2}}
 </ol>
