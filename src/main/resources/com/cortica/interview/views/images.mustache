@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" href="/assets/css/imagesView.css"/>
+
+    <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.5.3/angular.min.js"></script>
+    <script src="http://ajax.googleapis.com/ajax/libs/angular_material/1.1.0-rc2/angular-material.min.js"></script>
+</head>
+<body>
+<div flex>
+    <h1>Your {{numberOfImagesProcessed}} Image(s)</h1>
+    <ul>
+        {{#images}}
+        <div class="image-view">
+            <div class="image-view-title">{{name}}</div>
+            <div>
+                <img class="image-view-image" src="{{name}}" width="{{width}}" height="{{height}}"/>
+            </div>
+        </div>
+        {{/images}}
+    </ul>
+</div>
+</body>
+</html>

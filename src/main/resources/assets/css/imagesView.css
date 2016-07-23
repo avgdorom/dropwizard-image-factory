@@ -1,0 +1,13 @@
+.image-view {
+    display: inline-block;
+}
+
+.image-view-title {
+    font-size: 14px;
+    font-color: blue;
+    font-weight: bold;
+}
+
+.image-view-image {
+    border: 3px solid black;
+}
